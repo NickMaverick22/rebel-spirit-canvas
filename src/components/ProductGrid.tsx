@@ -6,43 +6,43 @@ const products = [
     id: '1',
     name: 'Shadow Blazer',
     price: 495,
-    image: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/bbca1e35-ddbf-4cb8-822b-cd37a7d34455.png'
   },
   {
     id: '2',
     name: 'Midnight Leather Jacket',
     price: 695,
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/a267ed2f-f3da-4c14-a71d-60f7569f1a94.png'
   },
   {
     id: '3',
     name: 'Rebel Trousers',
     price: 345,
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/86035809-6419-4e45-ae49-45e3ca0c068e.png'
   },
   {
     id: '4',
     name: 'Genesis Coat',
     price: 795,
-    image: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/18427915-1293-4f5d-9716-6ad58cdbcf13.png'
   },
   {
     id: '5',
     name: 'Statement Boots',
     price: 550,
-    image: 'https://images.unsplash.com/photo-1487887235947-a955ef187fcc?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/54274b88-62d4-4d59-ac4f-3fad86db6e25.png'
   },
   {
     id: '6',
     name: 'Minimalist Dress',
     price: 425,
-    image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/b46483f3-966a-47c2-890d-5961256a06d1.png'
   },
   {
     id: '7',
     name: 'Rebel Sneakers',
     price: 295,
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=1200&fit=crop'
+    image: '/lovable-uploads/d8edef61-2a31-4b77-842f-dba6764120b9.png'
   }
 ];
 
