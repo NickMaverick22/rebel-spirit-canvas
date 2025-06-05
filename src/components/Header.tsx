@@ -1,5 +1,5 @@
 
-import { User, Cart } from 'lucide-react';
+import { User, ShoppingCart } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useUser } from '@/contexts/UserContext';
 
@@ -40,7 +40,7 @@ const Header = () => {
               className="relative p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
               aria-label="Shopping Cart"
             >
-              <Cart 
+              <ShoppingCart 
                 size={20} 
                 className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
               />

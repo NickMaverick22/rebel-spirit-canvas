@@ -37,6 +37,12 @@ const products = [
     name: 'Minimalist Dress',
     price: 425,
     image: 'https://images.unsplash.com/photo-1527576539890-dfa815648363?w=800&h=1200&fit=crop'
+  },
+  {
+    id: '7',
+    name: 'Rebel Sneakers',
+    price: 295,
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=1200&fit=crop'
   }
 ];
 
@@ -44,7 +50,7 @@ const ProductGrid = () => {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12">
           {products.map((product) => (
             <Link
               key={product.id}
@@ -59,8 +65,8 @@ const ProductGrid = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-6 md:p-8">
-                  <h3 className="font-playfair text-xl md:text-2xl font-medium text-gray-900 mb-2 group-hover:text-rebellious-red transition-colors duration-300">
+                <div className="p-6">
+                  <h3 className="font-playfair text-xl font-medium text-gray-900 mb-2 group-hover:text-rebellious-red transition-colors duration-300">
                     {product.name}
                   </h3>
                   <p className="font-inter text-lg text-gray-600">

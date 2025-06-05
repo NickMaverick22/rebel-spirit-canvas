@@ -107,8 +107,8 @@ const ProductPage = () => {
                 </button>
               ))}
               
-              {/* Measurements Image Placeholder */}
-              <div className="aspect-square bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300">
+              {/* Size Guide Placeholder */}
+              <div className="aspect-square bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300 cursor-pointer hover:border-rebellious-red transition-colors">
                 <span className="font-inter text-xs text-gray-500 text-center px-2">
                   Size Guide
                 </span>
