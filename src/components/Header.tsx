@@ -8,7 +8,7 @@ const Header = () => {
   const { setDashboardOpen } = useUser();
 
   return (
-    <header className="relative z-50 bg-white border-b border-gray-100">
+    <header className="relative z-50 bg-black border-b border-gray-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -16,7 +16,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/c690406b-488b-44a7-bb45-c70060a14e7f.png" 
               alt="Rebellious Spirits" 
-              className="h-8 w-auto opacity-90"
+              className="h-8 w-auto opacity-90 brightness-0 invert"
             />
           </div>
 
@@ -25,24 +25,24 @@ const Header = () => {
             {/* User Icon */}
             <button
               onClick={() => setDashboardOpen(true)}
-              className="p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
+              className="p-2 hover:bg-gray-800 rounded-full transition-all duration-200 group"
               aria-label="User Dashboard"
             >
               <User 
                 size={20} 
-                className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
+                className="text-gray-300 group-hover:text-rebellious-red transition-colors duration-200" 
               />
             </button>
 
             {/* Cart Icon */}
             <button
               onClick={() => setIsOpen(true)}
-              className="relative p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
+              className="relative p-2 hover:bg-gray-800 rounded-full transition-all duration-200 group"
               aria-label="Shopping Cart"
             >
               <ShoppingCart 
                 size={20} 
-                className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
+                className="text-gray-300 group-hover:text-rebellious-red transition-colors duration-200" 
               />
               {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 bg-rebellious-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-inter font-medium">

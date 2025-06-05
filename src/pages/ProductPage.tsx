@@ -64,14 +64,14 @@ const ProductPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Header />
       
       <div className="container mx-auto px-6 py-8">
         {/* Back Button */}
         <Link 
           to="/"
-          className="inline-flex items-center space-x-2 text-gray-600 hover:text-rebellious-red transition-colors duration-300 mb-8"
+          className="inline-flex items-center space-x-2 text-gray-400 hover:text-rebellious-red transition-colors duration-300 mb-8"
         >
           <ArrowLeft size={20} />
           <span className="font-inter">Back to Collection</span>
@@ -81,7 +81,7 @@ const ProductPage = () => {
           {/* Left Side - Images */}
           <div className="space-y-4">
             {/* Main Image */}
-            <div className="aspect-[3/4] bg-gray-50 overflow-hidden shadow-editorial">
+            <div className="aspect-[3/4] bg-gray-900 overflow-hidden shadow-editorial">
               <img
                 src={product.images[selectedImage]}
                 alt={product.name}
@@ -95,7 +95,7 @@ const ProductPage = () => {
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`aspect-square bg-gray-50 overflow-hidden transition-opacity duration-300 ${
+                  className={`aspect-square bg-gray-900 overflow-hidden transition-opacity duration-300 ${
                     selectedImage === index ? 'ring-2 ring-rebellious-red' : 'hover:opacity-80'
                   }`}
                 >
@@ -108,8 +108,8 @@ const ProductPage = () => {
               ))}
               
               {/* Size Guide Placeholder */}
-              <div className="aspect-square bg-gray-100 flex items-center justify-center border-2 border-dashed border-gray-300 cursor-pointer hover:border-rebellious-red transition-colors">
-                <span className="font-inter text-xs text-gray-500 text-center px-2">
+              <div className="aspect-square bg-gray-800 flex items-center justify-center border-2 border-dashed border-gray-600 cursor-pointer hover:border-rebellious-red transition-colors">
+                <span className="font-inter text-xs text-gray-400 text-center px-2">
                   Size Guide
                 </span>
               </div>
@@ -119,42 +119,42 @@ const ProductPage = () => {
           {/* Right Side - Product Info */}
           <div className="space-y-8">
             <div>
-              <h1 className="font-playfair text-4xl md:text-5xl font-medium text-gray-900 mb-4">
+              <h1 className="font-playfair text-4xl md:text-5xl font-medium text-white mb-4">
                 {product.name}
               </h1>
-              <p className="font-inter text-2xl text-gray-900 mb-6">
+              <p className="font-inter text-2xl text-white mb-6">
                 ${product.price}
               </p>
-              <p className="font-inter text-gray-600 leading-relaxed">
+              <p className="font-inter text-gray-400 leading-relaxed">
                 {product.description}
               </p>
             </div>
 
             <div>
-              <h3 className="font-inter font-medium text-gray-900 mb-3">Materials</h3>
-              <p className="font-inter text-gray-600">{product.materials}</p>
+              <h3 className="font-inter font-medium text-white mb-3">Materials</h3>
+              <p className="font-inter text-gray-400">{product.materials}</p>
             </div>
 
             <div>
-              <h3 className="font-inter font-medium text-gray-900 mb-3">Measurements (M)</h3>
+              <h3 className="font-inter font-medium text-white mb-3">Measurements (M)</h3>
               <div className="grid grid-cols-3 gap-4 text-sm">
                 <div>
                   <span className="font-inter text-gray-500">Chest</span>
-                  <p className="font-inter font-medium">{product.measurements.chest}</p>
+                  <p className="font-inter font-medium text-white">{product.measurements.chest}</p>
                 </div>
                 <div>
                   <span className="font-inter text-gray-500">Length</span>
-                  <p className="font-inter font-medium">{product.measurements.length}</p>
+                  <p className="font-inter font-medium text-white">{product.measurements.length}</p>
                 </div>
                 <div>
                   <span className="font-inter text-gray-500">Shoulder</span>
-                  <p className="font-inter font-medium">{product.measurements.shoulder}</p>
+                  <p className="font-inter font-medium text-white">{product.measurements.shoulder}</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="font-inter font-medium text-gray-900 mb-4">Size</h3>
+              <h3 className="font-inter font-medium text-white mb-4">Size</h3>
               <div className="grid grid-cols-4 gap-3">
                 {sizes.map((size) => (
                   <button
@@ -163,7 +163,7 @@ const ProductPage = () => {
                     className={`py-3 border font-inter font-medium transition-all duration-300 ${
                       selectedSize === size
                         ? 'border-rebellious-red bg-rebellious-red text-white'
-                        : 'border-gray-300 text-gray-700 hover:border-gray-400'
+                        : 'border-gray-600 text-gray-300 hover:border-gray-400'
                     }`}
                   >
                     {size}
@@ -177,8 +177,8 @@ const ProductPage = () => {
               disabled={!selectedSize}
               className={`w-full py-4 px-8 font-inter font-medium transition-all duration-300 transform ${
                 selectedSize
-                  ? 'bg-black text-white hover:bg-rebellious-red hover:scale-[1.02]'
-                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  ? 'bg-white text-black hover:bg-rebellious-red hover:text-white hover:scale-[1.02]'
+                  : 'bg-gray-700 text-gray-500 cursor-not-allowed'
               }`}
             >
               {selectedSize ? 'Add to Cart' : 'Choose Size'}

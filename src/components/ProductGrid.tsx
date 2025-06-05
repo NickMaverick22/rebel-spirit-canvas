@@ -48,7 +48,7 @@ const products = [
 
 const ProductGrid = () => {
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-black py-16 md:py-24">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12">
           {products.map((product) => (
@@ -57,8 +57,8 @@ const ProductGrid = () => {
               to={`/product/${product.id}`}
               className="group block animate-fade-in"
             >
-              <div className="bg-white shadow-editorial hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1">
-                <div className="aspect-[3/4] overflow-hidden bg-gray-50">
+              <div className="bg-black shadow-editorial hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1 border border-gray-800">
+                <div className="aspect-[3/4] overflow-hidden bg-gray-900">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -66,10 +66,10 @@ const ProductGrid = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-playfair text-xl font-medium text-gray-900 mb-2 group-hover:text-rebellious-red transition-colors duration-300">
+                  <h3 className="font-playfair text-xl font-medium text-white mb-2 group-hover:text-rebellious-red transition-colors duration-300">
                     {product.name}
                   </h3>
-                  <p className="font-inter text-lg text-gray-600">
+                  <p className="font-inter text-lg text-gray-400">
                     ${product.price}
                   </p>
                 </div>
