@@ -9,7 +9,7 @@ const Footer = () => {
       setEmail('');
     }
   };
-  return <footer className="py-16 md:py-24 bg-slate-200">
+  return <footer className="py-16 md:py-24 bg-gray-100">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Email Signup */}
