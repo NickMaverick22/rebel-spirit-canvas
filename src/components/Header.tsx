@@ -1,5 +1,6 @@
 
 import { User, ShoppingCart, Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useCart } from '@/contexts/CartContext';
 import { useUser } from '@/contexts/UserContext';
 import { useWishlist } from '@/contexts/WishlistContext';
@@ -7,7 +8,7 @@ import { useWishlist } from '@/contexts/WishlistContext';
 const Header = () => {
   const { setIsOpen, totalItems } = useCart();
   const { setDashboardOpen } = useUser();
-  const { totalWishlistItems, setIsWishlistOpen } = useWishlist();
+  const { totalWishlistItems } = useWishlist();
 
   return (
     <header className="relative z-50 bg-white border-b border-gray-100">
@@ -18,7 +19,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
               alt="Rebellious Spirits" 
-              className="h-12 w-auto"
+              className="h-16 md:h-20 w-auto transition-all duration-300 hover:scale-105"
             />
           </div>
 
@@ -37,8 +38,8 @@ const Header = () => {
             </button>
 
             {/* Wishlist Icon */}
-            <button
-              onClick={() => setIsWishlistOpen(true)}
+            <Link
+              to="/wishlist"
               className="relative p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
               aria-label="Wishlist"
             >
@@ -51,7 +52,7 @@ const Header = () => {
                   {totalWishlistItems}
                 </span>
               )}
-            </button>
+            </Link>
 
             {/* Cart Icon */}
             <button

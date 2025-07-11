@@ -5,7 +5,6 @@ import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
 import Cart from '@/components/Cart';
 import UserDashboard from '@/components/UserDashboard';
-import Wishlist from '@/components/Wishlist';
 import { useCart } from '@/contexts/CartContext';
 import { toast } from 'sonner';
 import StarRating from '@/components/StarRating';
@@ -215,7 +214,6 @@ const ProductPage = () => {
       </div>
 
       <Cart />
-      <Wishlist />
       <UserDashboard />
     </div>
   );

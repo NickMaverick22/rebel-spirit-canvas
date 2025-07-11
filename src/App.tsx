@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProductPage from "./pages/ProductPage";
+import WishlistPage from "./pages/WishlistPage";
 import CountdownPage from "./pages/CountdownPage";
 import NotFound from "./pages/NotFound";
 import { CartProvider } from "./contexts/CartContext";
@@ -27,6 +28,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/countdown" element={<CountdownPage />} />
               <Route path="/product/:id" element={<ProductPage />} />
+              <Route path="/wishlist" element={<WishlistPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             </BrowserRouter>
