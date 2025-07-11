@@ -10,6 +10,7 @@ import CountdownPage from "./pages/CountdownPage";
 import NotFound from "./pages/NotFound";
 import { CartProvider } from "./contexts/CartContext";
 import { UserProvider } from "./contexts/UserContext";
+import { WishlistProvider } from "./contexts/WishlistContext";
 
 const queryClient = new QueryClient();
 
@@ -17,9 +18,10 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <UserProvider>
-        <CartProvider>
-          <Toaster />
-          <Sonner />
+        <WishlistProvider>
+          <CartProvider>
+            <Toaster />
+            <Sonner />
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
@@ -27,8 +29,9 @@ const App = () => (
               <Route path="/product/:id" element={<ProductPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
-        </CartProvider>
+            </BrowserRouter>
+          </CartProvider>
+        </WishlistProvider>
       </UserProvider>
     </TooltipProvider>
   </QueryClientProvider>
