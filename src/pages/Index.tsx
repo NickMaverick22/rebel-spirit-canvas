@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import ProductGrid from '@/components/ProductGrid';
 import Footer from '@/components/Footer';
 import Cart from '@/components/Cart';
+import Wishlist from '@/components/Wishlist';
 import UserDashboard from '@/components/UserDashboard';
 import CountdownPage from './CountdownPage';
 
@@ -29,6 +30,7 @@ const Index = () => {
       <ProductGrid />
       <Footer />
       <Cart />
+      <Wishlist />
       <UserDashboard />
     </div>
   );

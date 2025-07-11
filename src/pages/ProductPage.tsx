@@ -5,8 +5,11 @@ import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
 import Cart from '@/components/Cart';
 import UserDashboard from '@/components/UserDashboard';
+import Wishlist from '@/components/Wishlist';
 import { useCart } from '@/contexts/CartContext';
 import { toast } from 'sonner';
+import StarRating from '@/components/StarRating';
+import WishlistButton from '@/components/WishlistButton';
 
 const products = [
   {
@@ -14,9 +17,9 @@ const products = [
     name: 'Shadow Blazer',
     price: 495,
     images: [
-      'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=1200&fit=crop',
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=1200&fit=crop',
-      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=1200&fit=crop'
+      '/lovable-uploads/bbca1e35-ddbf-4cb8-822b-cd37a7d34455.png',
+      '/lovable-uploads/bbca1e35-ddbf-4cb8-822b-cd37a7d34455.png',
+      '/lovable-uploads/bbca1e35-ddbf-4cb8-822b-cd37a7d34455.png'
     ],
     materials: 'Premium wool blend with structured shoulders',
     description: 'A statement blazer that commands attention. Crafted with precision tailoring and rebellious spirit.',
@@ -33,6 +36,8 @@ const ProductPage = () => {
   const { addItem } = useCart();
   const [selectedSize, setSelectedSize] = useState('');
   const [selectedImage, setSelectedImage] = useState(0);
+  const [productRating] = useState(4.3);
+  const [totalReviews] = useState(127);
   
   const product = products.find(p => p.id === id);
 
@@ -61,6 +66,10 @@ const ProductPage = () => {
     });
 
     toast.success('Added to cart!');
+  };
+
+  const handleRating = (rating: number) => {
+    toast.success(`Thank you for rating this product ${rating} stars!`);
   };
 
   return (
@@ -119,12 +128,30 @@ const ProductPage = () => {
           {/* Right Side - Product Info */}
           <div className="space-y-8">
             <div>
-              <h1 className="font-playfair text-4xl md:text-5xl font-medium text-gray-900 mb-4">
-                {product.name}
-              </h1>
-              <p className="font-inter text-2xl text-gray-900 mb-6">
+              <div className="flex items-start justify-between mb-4">
+                <h1 className="font-playfair text-4xl md:text-5xl font-medium text-gray-900">
+                  {product.name}
+                </h1>
+                <WishlistButton 
+                  product={{
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.images[0]
+                  }} 
+                  size="lg" 
+                />
+              </div>
+              <p className="font-inter text-2xl text-gray-900 mb-4">
                 ${product.price}
               </p>
+              <div className="mb-6">
+                <StarRating 
+                  rating={productRating} 
+                  totalReviews={totalReviews}
+                  onRate={handleRating}
+                />
+              </div>
               <p className="font-inter text-gray-600 leading-relaxed">
                 {product.description}
               </p>
@@ -188,6 +215,7 @@ const ProductPage = () => {
       </div>
 
       <Cart />
+      <Wishlist />
       <UserDashboard />
     </div>
   );

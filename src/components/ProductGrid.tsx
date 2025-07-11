@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import WishlistButton from './WishlistButton';
 
 const products = [
   {
@@ -49,8 +50,22 @@ const products = [
 const ProductGrid = () => {
   return (
     <section className="bg-white py-16 md:py-24">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12">
+      {/* Collection Banner */}
+      <div className="relative mb-16">
+        <div className="bg-gray-900 text-white py-12 md:py-16">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="font-playfair text-3xl md:text-5xl font-medium tracking-wide">
+              REBELLIOUS COLLECTION
+            </h2>
+            <p className="font-inter text-lg md:text-xl mt-4 opacity-90">
+              Curated pieces for the fearless
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 md:px-12 lg:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {products.map((product) => (
             <Link
               key={product.id}
@@ -58,12 +73,15 @@ const ProductGrid = () => {
               className="group block animate-fade-in"
             >
               <div className="bg-white shadow-editorial hover:shadow-hover transition-all duration-500 transform hover:-translate-y-1">
-                <div className="aspect-[3/4] overflow-hidden bg-gray-50">
+                <div className="relative aspect-[3/4] overflow-hidden bg-gray-50">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <WishlistButton product={product} size="md" />
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="font-playfair text-xl font-medium text-gray-900 mb-2 group-hover:text-rebellious-red transition-colors duration-300">

@@ -1,11 +1,13 @@
 
-import { User, ShoppingCart } from 'lucide-react';
+import { User, ShoppingCart, Heart } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useUser } from '@/contexts/UserContext';
+import { useWishlist } from '@/contexts/WishlistContext';
 
 const Header = () => {
   const { setIsOpen, totalItems } = useCart();
   const { setDashboardOpen } = useUser();
+  const { totalWishlistItems, setIsWishlistOpen } = useWishlist();
 
   return (
     <header className="relative z-50 bg-white border-b border-gray-100">
@@ -14,14 +16,14 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-1">
             <img 
-              src="/lovable-uploads/c690406b-488b-44a7-bb45-c70060a14e7f.png" 
+              src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
               alt="Rebellious Spirits" 
-              className="h-8 w-auto opacity-90"
+              className="h-12 w-auto"
             />
           </div>
 
           {/* Header Icons */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4">
             {/* User Icon */}
             <button
               onClick={() => setDashboardOpen(true)}
@@ -32,6 +34,23 @@ const Header = () => {
                 size={20} 
                 className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
               />
+            </button>
+
+            {/* Wishlist Icon */}
+            <button
+              onClick={() => setIsWishlistOpen(true)}
+              className="relative p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
+              aria-label="Wishlist"
+            >
+              <Heart 
+                size={20} 
+                className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
+              />
+              {totalWishlistItems > 0 && (
+                <span className="absolute -top-1 -right-1 bg-rebellious-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-inter font-medium">
+                  {totalWishlistItems}
+                </span>
+              )}
             </button>
 
             {/* Cart Icon */}

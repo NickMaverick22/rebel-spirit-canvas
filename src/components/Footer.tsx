@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 const Footer = () => {
   const [email, setEmail] = useState('');
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,23 +28,98 @@ const Footer = () => {
             </form>
           </div>
 
-          {/* Footer Links */}
+          {/* Footer Content */}
           <div className="border-t border-gray-200 pt-12">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <div className="mb-6 md:mb-0">
-                <img src="/lovable-uploads/c690406b-488b-44a7-bb45-c70060a14e7f.png" alt="Rebellious Spirits" className="h-6 w-auto opacity-70" />
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+              {/* Brand & Logo */}
+              <div className="col-span-1 md:col-span-2">
+                <img 
+                  src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
+                  alt="Rebellious Spirits" 
+                  className="h-8 w-auto mb-4" 
+                />
+                <p className="font-inter text-gray-600 text-sm leading-relaxed max-w-md">
+                  Rebellious Spirits crafts bold, uncompromising fashion for those who dare to stand out. 
+                  Every piece tells a story of rebellion, authenticity, and fearless self-expression.
+                </p>
               </div>
-              <nav className="flex space-x-8">
-                <a href="#about" className="font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
-                  About
-                </a>
-                <a href="#terms" className="font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
-                  Terms
-                </a>
-                <a href="#privacy" className="font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
-                  Privacy
-                </a>
-              </nav>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="font-playfair text-lg font-medium text-gray-900 mb-4">
+                  Quick Links
+                </h4>
+                <nav className="space-y-3">
+                  <a href="#about" className="block font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
+                    About Us
+                  </a>
+                  <a href="#size-guide" className="block font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
+                    Size Guide
+                  </a>
+                  <a href="#shipping" className="block font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
+                    Shipping Info
+                  </a>
+                  <a href="#returns" className="block font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
+                    Returns
+                  </a>
+                </nav>
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <h4 className="font-playfair text-lg font-medium text-gray-900 mb-4">
+                  Get in Touch
+                </h4>
+                <div className="space-y-3">
+                  <a 
+                    href="mailto:hello@rebellious-spirits.com" 
+                    className="flex items-center font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300"
+                  >
+                    <Mail size={16} className="mr-3" />
+                    hello@rebellious-spirits.com
+                  </a>
+                  <a 
+                    href="tel:+1234567890" 
+                    className="flex items-center font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300"
+                  >
+                    <Phone size={16} className="mr-3" />
+                    +1 (234) 567-890
+                  </a>
+                  <div className="flex items-center font-inter text-gray-600">
+                    <MapPin size={16} className="mr-3" />
+                    Los Angeles, CA
+                  </div>
+                  <a 
+                    href="https://instagram.com/rebellious_spirits" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300"
+                  >
+                    <Instagram size={16} className="mr-3" />
+                    @rebellious_spirits
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-gray-200 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center">
+                <p className="font-inter text-sm text-gray-500 mb-4 md:mb-0">
+                  © 2024 Rebellious Spirits. All rights reserved.
+                </p>
+                <nav className="flex space-x-6">
+                  <a href="#terms" className="font-inter text-sm text-gray-500 hover:text-rebellious-red transition-colors duration-300">
+                    Terms of Service
+                  </a>
+                  <a href="#privacy" className="font-inter text-sm text-gray-500 hover:text-rebellious-red transition-colors duration-300">
+                    Privacy Policy
+                  </a>
+                  <a href="#cookies" className="font-inter text-sm text-gray-500 hover:text-rebellious-red transition-colors duration-300">
+                    Cookie Policy
+                  </a>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
