@@ -14,8 +14,11 @@ const Header = () => {
     <header className="relative z-50 bg-white border-b border-gray-100">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex-1">
+          {/* Left spacer for balance */}
+          <div className="flex-1"></div>
+          
+          {/* Logo - Centered */}
+          <div className="flex justify-center">
             <img 
               src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
               alt="Rebellious Spirits" 
@@ -23,8 +26,8 @@ const Header = () => {
             />
           </div>
 
-          {/* Header Icons */}
-          <div className="flex items-center space-x-4">
+          {/* Header Icons - Right */}
+          <div className="flex-1 flex items-center justify-end space-x-4">
             {/* User Icon */}
             <button
               onClick={() => setDashboardOpen(true)}
