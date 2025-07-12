@@ -19,7 +19,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
               alt="Rebellious Spirits" 
-              className="h-16 md:h-20 w-auto transition-all duration-300 hover:scale-105"
+              className="h-24 md:h-32 w-auto transition-all duration-300 hover:scale-105"
             />
           </div>
 
