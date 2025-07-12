@@ -50,8 +50,8 @@ const products = [
 const ProductGrid = () => {
   return (
     <section className="bg-white py-8 md:py-12">
-      <div className="container mx-auto px-6 md:px-12 lg:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+      <div className="container mx-auto px-12 md:px-24 lg:px-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto">
           {products.map((product) => (
             <Link
               key={product.id}
