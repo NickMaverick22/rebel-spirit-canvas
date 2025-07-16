@@ -1,6 +1,6 @@
 import { Heart, ArrowLeft } from 'lucide-react';
 import { useWishlist } from '@/contexts/WishlistContext';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import Header from '@/components/Header';
 import Cart from '@/components/Cart';
 import UserDashboard from '@/components/UserDashboard';

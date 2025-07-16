@@ -1,17 +1,17 @@
 
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link } from "wouter";
 import { useEffect } from "react";
 
 const NotFound = () => {
-  const location = useLocation();
+  const [location] = useLocation();
 
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
-      location.pathname
+      location
     );
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [location]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">

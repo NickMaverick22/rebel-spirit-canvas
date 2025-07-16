@@ -2,8 +2,8 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Router, Route, Switch } from "wouter";
 import Index from "./pages/Index";
 import ProductPage from "./pages/ProductPage";
 import WishlistPage from "./pages/WishlistPage";
@@ -12,8 +12,7 @@ import NotFound from "./pages/NotFound";
 import { CartProvider } from "./contexts/CartContext";
 import { UserProvider } from "./contexts/UserContext";
 import { WishlistProvider } from "./contexts/WishlistContext";
-
-const queryClient = new QueryClient();
+import { queryClient } from "@/lib/queryClient";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -23,15 +22,15 @@ const App = () => (
           <CartProvider>
             <Toaster />
             <Sonner />
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/countdown" element={<CountdownPage />} />
-              <Route path="/product/:id" element={<ProductPage />} />
-              <Route path="/wishlist" element={<WishlistPage />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            </BrowserRouter>
+            <Router>
+              <Switch>
+                <Route path="/" component={Index} />
+                <Route path="/countdown" component={CountdownPage} />
+                <Route path="/product/:id" component={ProductPage} />
+                <Route path="/wishlist" component={WishlistPage} />
+                <Route component={NotFound} />
+              </Switch>
+            </Router>
           </CartProvider>
         </WishlistProvider>
       </UserProvider>

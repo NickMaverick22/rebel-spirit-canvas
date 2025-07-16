@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'wouter';
 import { ArrowLeft } from 'lucide-react';
 import Header from '@/components/Header';
 import Cart from '@/components/Cart';

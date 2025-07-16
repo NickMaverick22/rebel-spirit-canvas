@@ -1,6 +1,6 @@
 
 import { User, ShoppingCart, Heart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import { useCart } from '@/contexts/CartContext';
 import { useUser } from '@/contexts/UserContext';
 import { useWishlist } from '@/contexts/WishlistContext';

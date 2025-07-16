@@ -1,6 +1,6 @@
 import { X, Heart } from 'lucide-react';
 import { useWishlist } from '@/contexts/WishlistContext';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 
 const Wishlist = () => {
   const { 
