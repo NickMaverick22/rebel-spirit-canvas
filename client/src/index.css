@@ -1,3 +1,6 @@
+/* Import sophisticated fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +100,87 @@
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
+}
+
+/* Custom sophisticated color palette */
+:root {
+  --rebellious-red: #8B0000;
+  --rebellious-red-light: #A52A2A;
+  --charcoal: #1A1A1A;
+  --warm-gray: #F8F7F5;
+  --cool-gray-50: #F9FAFB;
+  --cool-gray-100: #F3F4F6;
+  --cool-gray-200: #E5E7EB;
+  --cool-gray-300: #D1D5DB;
+  --cool-gray-600: #4B5563;
+  --cool-gray-700: #374151;
+  --cool-gray-800: #1F2937;
+  --cool-gray-900: #111827;
+}
+
+/* Typography enhancements */
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sophisticated shadows */
+.shadow-editorial {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-luxury {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Sophisticated animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+/* Enhanced hover effects */
+.transition-sophisticated {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Premium text styles */
+.text-luxury {
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--cool-gray-700) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Refined borders */
+.border-refined {
+  border: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+/* Backdrop blur effects */
+.backdrop-blur-refined {
+  backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.85);
 }

@@ -11,47 +11,47 @@ const Header = () => {
   const { totalWishlistItems } = useWishlist();
 
   return (
-    <header className="relative z-50 bg-white border-b border-gray-100">
-      <div className="container mx-auto px-6 py-4">
+    <header className="relative z-50 bg-white/95 backdrop-blur-refined border-b border-refined">
+      <div className="container mx-auto px-8 py-6 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Left spacer for balance */}
-          <div className="flex-1"></div>
+          <div className="flex-1 hidden lg:block"></div>
           
           {/* Logo - Centered */}
-          <div className="flex justify-center">
+          <div className="flex justify-center lg:justify-center flex-1 lg:flex-none">
             <img 
               src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
               alt="Rebellious Spirits" 
-              className="h-24 md:h-32 w-auto transition-all duration-300 hover:scale-105"
+              className="h-20 md:h-28 lg:h-32 w-auto transition-sophisticated hover:scale-105 filter drop-shadow-sm"
             />
           </div>
 
           {/* Header Icons - Right */}
-          <div className="flex-1 flex items-center justify-end space-x-4">
+          <div className="flex-1 flex items-center justify-end space-x-6 lg:space-x-8">
             {/* User Icon */}
             <button
               onClick={() => setDashboardOpen(true)}
-              className="p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
+              className="p-3 hover:bg-cool-gray-50 rounded-full transition-sophisticated group relative"
               aria-label="User Dashboard"
             >
               <User 
-                size={20} 
-                className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
+                size={22} 
+                className="text-cool-gray-700 group-hover:text-rebellious-red transition-sophisticated stroke-[1.5]" 
               />
             </button>
 
             {/* Wishlist Icon */}
             <Link
               to="/wishlist"
-              className="relative p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
+              className="relative p-3 hover:bg-cool-gray-50 rounded-full transition-sophisticated group"
               aria-label="Wishlist"
             >
               <Heart 
-                size={20} 
-                className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
+                size={22} 
+                className="text-cool-gray-700 group-hover:text-rebellious-red transition-sophisticated stroke-[1.5]" 
               />
               {totalWishlistItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-rebellious-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-inter font-medium">
+                <span className="absolute -top-1 -right-1 bg-rebellious-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-inter font-medium shadow-lg">
                   {totalWishlistItems}
                 </span>
               )}
@@ -60,15 +60,15 @@ const Header = () => {
             {/* Cart Icon */}
             <button
               onClick={() => setIsOpen(true)}
-              className="relative p-2 hover:bg-gray-50 rounded-full transition-all duration-200 group"
+              className="relative p-3 hover:bg-cool-gray-50 rounded-full transition-sophisticated group"
               aria-label="Shopping Cart"
             >
               <ShoppingCart 
-                size={20} 
-                className="text-gray-700 group-hover:text-rebellious-red transition-colors duration-200" 
+                size={22} 
+                className="text-cool-gray-700 group-hover:text-rebellious-red transition-sophisticated stroke-[1.5]" 
               />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 bg-rebellious-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-inter font-medium">
+                <span className="absolute -top-1 -right-1 bg-rebellious-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-inter font-medium shadow-lg">
                   {totalItems}
                 </span>
               )}

@@ -11,23 +11,23 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="py-16 md:py-24 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+    <footer className="py-20 md:py-32 bg-charcoal text-white">
+      <div className="container mx-auto px-8 md:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
             {/* Left Column - Links */}
-            <div className="space-y-8">
+            <div className="space-y-10">
               {/* Contact */}
               <div>
-                <h4 className="font-playfair text-lg font-medium text-gray-900 mb-4 uppercase tracking-wide">
+                <h4 className="font-playfair text-xl font-medium text-white mb-6 uppercase tracking-widest">
                   Contact
                 </h4>
-                <div className="space-y-2">
-                  <a href="mailto:hello@rebellious-spirits.com" className="block font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
+                <div className="space-y-3">
+                  <a href="mailto:hello@rebellious-spirits.com" className="block font-inter text-cool-gray-300 hover:text-rebellious-red-light transition-sophisticated">
                     hello@rebellious-spirits.com
                   </a>
-                  <a href="tel:+1234567890" className="block font-inter text-gray-600 hover:text-rebellious-red transition-colors duration-300">
+                  <a href="tel:+1234567890" className="block font-inter text-cool-gray-300 hover:text-rebellious-red-light transition-sophisticated">
                     +1 (234) 567-890
                   </a>
                 </div>
@@ -81,23 +81,26 @@ const Footer = () => {
 
             {/* Middle Column - Email Signup */}
             <div className="text-center">
-              <h3 className="font-playfair text-2xl md:text-3xl font-medium text-gray-900 mb-6 uppercase tracking-wide">
-                Get Notified Before The Next Drop
+              <h3 className="font-playfair text-2xl md:text-3xl font-medium text-white mb-8 uppercase tracking-widest leading-tight">
+                Exclusive Access
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <p className="font-inter text-cool-gray-300 mb-8 leading-relaxed">
+                Be the first to discover our latest pieces
+              </p>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <input 
                   type="email" 
                   value={email} 
                   onChange={e => setEmail(e.target.value)} 
-                  placeholder="Enter your email" 
-                  className="w-full px-4 py-3 border border-gray-300 rounded-none font-inter text-gray-900 placeholder-gray-500 focus:outline-none focus:border-rebellious-red transition-colors duration-300" 
+                  placeholder="Your email address" 
+                  className="w-full px-6 py-4 bg-transparent border border-cool-gray-600 rounded-lg font-inter text-white placeholder-cool-gray-400 focus:outline-none focus:border-rebellious-red-light transition-sophisticated" 
                   required 
                 />
                 <button 
                   type="submit" 
-                  className="w-full px-8 py-3 bg-black text-white font-inter font-medium hover:bg-rebellious-red transition-all duration-300 transform hover:scale-105 uppercase tracking-wide"
+                  className="w-full px-8 py-4 bg-rebellious-red text-white font-inter font-medium hover:bg-rebellious-red-light transition-sophisticated transform hover:scale-105 uppercase tracking-wider rounded-lg"
                 >
-                  Subscribe
+                  Join the List
                 </button>
               </form>
             </div>
