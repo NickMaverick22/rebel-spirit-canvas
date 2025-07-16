@@ -150,15 +150,15 @@ const Footer = () => {
                   We Accept
                 </h4>
                 <div className="flex items-center space-x-3">
-                  <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-sm border border-white/10 hover:border-white/20 transition-sophisticated">
+                  <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-sm border border-white/10">
                     <CreditCard size={18} className="text-[var(--cool-gray-300)]" />
                     <span className="font-inter text-xs text-[var(--cool-gray-300)] uppercase tracking-wide">Visa</span>
                   </div>
-                  <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-sm border border-white/10 hover:border-white/20 transition-sophisticated">
+                  <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-sm border border-white/10">
                     <CreditCard size={18} className="text-[var(--cool-gray-300)]" />
                     <span className="font-inter text-xs text-[var(--cool-gray-300)] uppercase tracking-wide">MC</span>
                   </div>
-                  <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-sm border border-white/10 hover:border-white/20 transition-sophisticated">
+                  <div className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-3 rounded-sm border border-white/10">
                     <Banknote size={18} className="text-[var(--cool-gray-300)]" />
                     <span className="font-inter text-xs text-[var(--cool-gray-300)] uppercase tracking-wide">Amex</span>
                   </div>

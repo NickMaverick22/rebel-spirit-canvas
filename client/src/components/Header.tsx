@@ -19,11 +19,11 @@ const Header = () => {
           
           {/* Logo - Centered */}
           <div className="flex justify-center lg:justify-center flex-1 lg:flex-none">
-            <img 
-              src="/lovable-uploads/f168ab13-0fc0-4291-abb1-4e09d78439b6.png" 
-              alt="Rebellious Spirits" 
-              className="h-20 md:h-28 lg:h-32 w-auto transition-sophisticated hover:scale-105 filter drop-shadow-sm"
-            />
+            <Link to="/" className="cursor-pointer">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[var(--charcoal)] uppercase tracking-widest">
+                Rebellious Spirits
+              </h1>
+            </Link>
           </div>
 
           {/* Header Icons - Right */}
