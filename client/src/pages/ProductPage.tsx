@@ -27,6 +27,108 @@ const products = [
       length: '28"',
       shoulder: '18"'
     }
+  },
+  {
+    id: '2',
+    name: 'Midnight Leather Jacket',
+    price: 695,
+    images: [
+      '/lovable-uploads/a267ed2f-f3da-4c14-a71d-60f7569f1a94.png',
+      '/lovable-uploads/a267ed2f-f3da-4c14-a71d-60f7569f1a94.png',
+      '/lovable-uploads/a267ed2f-f3da-4c14-a71d-60f7569f1a94.png'
+    ],
+    materials: 'Genuine Italian leather with soft suede lining',
+    description: 'Rebellious edge meets timeless sophistication. This leather jacket defines your fearless attitude.',
+    measurements: {
+      chest: '44"',
+      length: '26"',
+      shoulder: '19"'
+    }
+  },
+  {
+    id: '3',
+    name: 'Rebel Trousers',
+    price: 345,
+    images: [
+      '/lovable-uploads/86035809-6419-4e45-ae49-45e3ca0c068e.png',
+      '/lovable-uploads/86035809-6419-4e45-ae49-45e3ca0c068e.png',
+      '/lovable-uploads/86035809-6419-4e45-ae49-45e3ca0c068e.png'
+    ],
+    materials: 'High-quality cotton twill with stretch comfort',
+    description: 'Contemporary fit meets rebellious style. Perfect for those who dare to stand out.',
+    measurements: {
+      waist: '32"',
+      length: '34"',
+      thigh: '12"'
+    }
+  },
+  {
+    id: '4',
+    name: 'Genesis Coat',
+    price: 795,
+    images: [
+      '/lovable-uploads/18427915-1293-4f5d-9716-6ad58cdbcf13.png',
+      '/lovable-uploads/18427915-1293-4f5d-9716-6ad58cdbcf13.png',
+      '/lovable-uploads/18427915-1293-4f5d-9716-6ad58cdbcf13.png'
+    ],
+    materials: 'Luxury cashmere blend with silk interior',
+    description: 'The ultimate statement piece. Where sophistication meets rebellion in perfect harmony.',
+    measurements: {
+      chest: '46"',
+      length: '48"',
+      shoulder: '20"'
+    }
+  },
+  {
+    id: '5',
+    name: 'Statement Boots',
+    price: 550,
+    images: [
+      '/lovable-uploads/54274b88-62d4-4d59-ac4f-3fad86db6e25.png',
+      '/lovable-uploads/54274b88-62d4-4d59-ac4f-3fad86db6e25.png',
+      '/lovable-uploads/54274b88-62d4-4d59-ac4f-3fad86db6e25.png'
+    ],
+    materials: 'Premium leather with reinforced heel and sole',
+    description: 'Bold footwear for the bold spirit. These boots make every step a statement.',
+    measurements: {
+      length: '12"',
+      width: '4.5"',
+      heel: '2"'
+    }
+  },
+  {
+    id: '6',
+    name: 'Minimalist Dress',
+    price: 425,
+    images: [
+      '/lovable-uploads/b46483f3-966a-47c2-890d-5961256a06d1.png',
+      '/lovable-uploads/b46483f3-966a-47c2-890d-5961256a06d1.png',
+      '/lovable-uploads/b46483f3-966a-47c2-890d-5961256a06d1.png'
+    ],
+    materials: 'Sustainable organic cotton with natural dyes',
+    description: 'Effortless elegance with rebellious undertones. Minimalism redefined.',
+    measurements: {
+      bust: '36"',
+      length: '42"',
+      waist: '30"'
+    }
+  },
+  {
+    id: '7',
+    name: 'Rebel Sneakers',
+    price: 295,
+    images: [
+      '/lovable-uploads/d8edef61-2a31-4b77-842f-dba6764120b9.png',
+      '/lovable-uploads/d8edef61-2a31-4b77-842f-dba6764120b9.png',
+      '/lovable-uploads/d8edef61-2a31-4b77-842f-dba6764120b9.png'
+    ],
+    materials: 'Canvas upper with rubber sole and cushioned insole',
+    description: 'Street style meets rebellion. Comfort and attitude in every step.',
+    measurements: {
+      length: '11"',
+      width: '4"',
+      sole: '1.5"'
+    }
   }
 ];
 
@@ -164,18 +266,12 @@ const ProductPage = () => {
             <div>
               <h3 className="font-inter font-medium text-gray-900 mb-3">Measurements (M)</h3>
               <div className="grid grid-cols-3 gap-4 text-sm">
-                <div>
-                  <span className="font-inter text-gray-500">Chest</span>
-                  <p className="font-inter font-medium">{product.measurements.chest}</p>
-                </div>
-                <div>
-                  <span className="font-inter text-gray-500">Length</span>
-                  <p className="font-inter font-medium">{product.measurements.length}</p>
-                </div>
-                <div>
-                  <span className="font-inter text-gray-500">Shoulder</span>
-                  <p className="font-inter font-medium">{product.measurements.shoulder}</p>
-                </div>
+                {Object.entries(product.measurements).map(([key, value]) => (
+                  <div key={key}>
+                    <span className="font-inter text-gray-500 capitalize">{key}</span>
+                    <p className="font-inter font-medium">{value}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
